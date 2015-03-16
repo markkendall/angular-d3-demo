@@ -1,0 +1,79 @@
+/**
+ * default development theme for jQRangeSlider
+ */
+
+.range-slider{
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-top: 30px;
+}
+
+.ui-rangeSlider{
+  animation: in 1s $b-transition-quintOut;
+  background: $base2;
+  float: left;
+  height: 30px;
+  margin-right: map-get($b-space, fixed);
+  width: 100%;
+}
+
+.ui-rangeSlider .ui-rangeSlider-innerBar{
+  height:30px;
+}
+
+.ui-rangeSlider .ui-rangeSlider-handle{
+  width:6px;
+  height:30px;
+  background:$blue;
+  cursor:col-resize;
+}
+
+.ui-rangeSlider .ui-rangeSlider-bar{
+  background:rgba(scale-color($blue, $lightness: 25%), 0.5);
+  height:30px;
+  cursor:move;
+  cursor:grab;
+}
+
+.ui-rangeSlider .ui-rangeSlider-bar.ui-draggable-dragging{
+  cursor:move;
+  cursor:grabbing;
+}
+
+.ui-rangeSlider-arrow{
+  display: none;
+}
+
+.ui-rangeSlider-arrow-inner{
+  display: none;
+}
+
+.ui-rangeSlider-container{
+  height:30px;
+}
+
+.ui-rangeSlider-label{
+  background: $base02;
+  bottom: 32px;
+  cursor: col-resize;
+  color: $base3;
+  font-size: map-get($b-fontSize, s);
+  padding: 0.1em map-get($b-space, xs) 0.15em;
+  text-align: center;
+  transition: opacity 0.4s $b-transition-quintOut;
+  z-index: 100;
+  &::after {
+    border-bottom: 0;
+    border: 5px solid transparent;
+    border-top-color: $base02;
+    content: '';
+    left: 50%;
+    margin-left: -5px;
+    position: absolute;
+    top: 100%;
+  }
+}
+
+.ui-rangeSlider-label-inner{
+  display:none;
+}

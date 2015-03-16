@@ -1,0 +1,102 @@
+// *************************************
+//
+//   Config
+//   -> Fonts, variables
+//
+// *************************************
+
+// -------------------------------------
+//   Colors
+// -------------------------------------
+
+// ----- Palette ----- //
+$base03:    #002b36;
+$base02:    #073642;
+$base01:    #586e75;
+$base00:    #657b83;
+$base0:     #839496;
+$base1:     #93a1a1;
+$base2:     #eee8d5;
+$base3:     #fdf6e3;
+$yellow:    #b58900;
+$orange:    #cb4b16;
+$red:       #dc322f;
+$magenta:   #d33682;
+$violet:    #6c71c4;
+$blue:      #268bd2;
+$cyan:      #2aa198;
+$green:     #859900;
+
+// $aqua: #2e4d5e;
+// $aqua-dark: #274250;
+// $aqua-light: #426f87;
+// $blue: #182233;
+// $blue-dark: #141d2b;
+// $blue-light: #233149;
+// $magenta: #6f3d4f;
+// $magenta-dark: #6f3d4f;
+// $magenta-light: #a05872;
+// $stone: #6e6e66;
+// $stone-dark: #5e5e57;
+// $stone-light: #9e9e93;
+// $tan: #beb8aa;
+// $tan-dark: #b4ad9d;
+// $tan-light: #ece9e3;
+// $tan-xlight: #fcfbfa;
+
+// -------------------------------------
+//   Foundation
+// -------------------------------------
+
+// ----- Geometry ----- //
+
+$b-space: (
+  f: 0,
+  xxs: 0.25em,
+  xs: 0.5em,
+  s: 0.75em,
+  m: 1em,
+  l: 2em,
+  xl: 3em,
+  fixed: 0.625em
+);
+
+$b-borderRadius: (
+  s: 0.125em,
+  m: 0.25em,
+);
+
+// ----- Grid ----- //
+
+$b-grid: (
+  xs: 30em,
+  s: 40em,
+  m: 60em,
+  l: 75em
+);
+
+// ----- Typography ----- //
+
+$b-fontFamily: (
+  base: #{Soleil, "Helvetica Neue", Helvetica, sans-serif},
+  icons: "icons"
+);
+
+$b-fontSize: (
+  root: 16px,
+  xs: 62.5%,
+  s: 75%,
+  m: 100%,
+  l: 125%,
+  xl: 225%
+);
+
+$b-lineHeight: (
+  button: 1,
+  heading: 1.2,
+  text: 1.5
+);
+
+// ----- Transitions ----- //
+
+$b-transition-quintOut: cubic-bezier(0.23, 1, 0.32, 1);

@@ -1,0 +1,7 @@
+%h1.tac.pbs Stats for {{ user }}/{{ repo }}
+%div
+  %time-graph{heading: '"Commits per Week"', data: 'commits', unit: '"Commits"', start: 'startTime', end: 'endTime'}
+  %time-graph{heading: '"Additions per Week"', data: 'additions', unit: '"Lines (K)"', start: 'startTime', end: 'endTime'}
+  %time-graph{heading: '"Deletions per Week"', data: 'deletions', unit: '"Lines (K)"', start: 'startTime', end: 'endTime'}
+  .range-slider
+    %time-range{start: 'startTime', end: 'endTime', min: 'minTime', max: 'maxTime'}

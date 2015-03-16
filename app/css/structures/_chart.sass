@@ -1,0 +1,72 @@
+// *************************************
+//
+//   Chart
+//   -> Expanded graphs
+//
+// *************************************
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+// ----- Axis ----- //
+
+.chart-axis
+  path
+    fill: transparent
+    stroke: transparent
+  text
+    fill: $base0
+    font-size: map-get($b-fontSize, s)
+    font-weight: bold
+  line
+    shape-rendering: crispEdges
+    stroke: rgba($base0, 0.5)
+
+// ----- Area ----- //
+
+.chart-area
+  fill: rgba($blue, 0.4)
+
+// ----- Label ----- //
+
+.chart-label
+  background: $base02
+  color: $base3
+  font-size: map-get($b-fontSize, s)
+  opacity: 0
+  padding: map-get($b-space, xs) map-get($b-space, m)
+  text-align: center
+  transition: opacity 0.4s $b-transition-quintOut
+  z-index: 100
+  &::after
+    border-bottom: 0
+    border: 5px solid transparent
+    border-top-color: $base02
+    content: ''
+    left: 50%
+    margin-left: -5px
+    position: absolute
+    top: 100%
+  strong
+    display: block
+    font-size: 150%
+
+// ----- Line ----- //
+
+.chart-line
+  fill: none
+  stroke: rgba(scale-color($blue, $lightness: 25%), 0.5)
+  stroke-linecap: round
+  stroke-linejoin: round
+  stroke-width: 2px
+  transition: stroke 0.4s $b-transition-quintOut
+
+// ----- Plot ----- //
+
+.chart-plot
+  fill: scale-color($blue, $lightness: 25%)
+  cursor: pointer
+  &:hover,
+  &:focus
+    fill: $green

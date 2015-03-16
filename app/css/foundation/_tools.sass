@@ -1,0 +1,126 @@
+// *************************************
+//
+//   Utilities
+//   -> Global utilities
+//
+// *************************************
+
+// -------------------------------------
+//   Anchor
+// -------------------------------------
+
+.ar
+  position: relative
+
+// -------------------------------------
+//   Display
+// -------------------------------------
+
+.db
+  display: block
+.dib
+  display: inline-block
+
+// -------------------------------------
+//   Float
+// -------------------------------------
+
+.fl
+  float: left
+.fr
+  float: right
+
+// -------------------------------------
+//   List
+// -------------------------------------
+
+.lr
+  list-style: none
+  margin-bottom: 0
+  padding-left: 0
+  li
+    margin-bottom: 0
+
+// -------------------------------------
+//   Margins
+// -------------------------------------
+
+@each $margin in $b-space
+  .mb#{nth($margin, 1)}
+    margin-bottom: #{nth($margin, 2)}
+  .ml#{nth($margin, 1)}
+    margin-left: #{nth($margin, 2)}
+  .mr#{nth($margin, 1)}
+    margin-right: #{nth($margin, 2)}
+  .mt#{nth($margin, 1)}
+    margin-top: #{nth($margin, 2)}
+
+// ----- Horizontal ----- //
+
+.mhc
+  margin-left: auto
+  margin-right: auto
+
+// -------------------------------------
+//   Orientation
+// -------------------------------------
+
+.diamond
+  display: flex
+  overflow: hidden
+  transform: rotate(-45deg)
+  span
+    display: block
+    margin: auto
+    text-align: center
+    transform: rotate(45deg)
+
+// -------------------------------------
+//   Padding
+// -------------------------------------
+
+@each $padding in $b-space
+  .pa#{nth($padding, 1)}
+    padding: #{nth($padding, 2)}
+  .pb#{nth($padding, 1)}
+    padding-bottom: #{nth($padding, 2)}
+  .pl#{nth($padding, 1)}
+    padding-left: #{nth($padding, 2)}
+  .pr#{nth($padding, 1)}
+    padding-right: #{nth($padding, 2)}
+  .pt#{nth($padding, 1)}
+    padding-top: #{nth($padding, 2)}
+
+// -------------------------------------
+//   Text
+// -------------------------------------
+
+// ----- Alignment ----- //
+
+.tal
+  text-align: left
+.tac
+  text-align: center
+.tar
+  text-align: right
+
+// ----- Size ----- //
+
+.tsxs
+  font-size: map-get($b-fontSize, xs)
+.tss
+  font-size: map-get($b-fontSize, s)
+.tsm
+  font-size: map-get($b-fontSize, m)
+
+// ----- Transform ----- //
+
+.ttu
+  text-transform: uppercase
+
+// ----- Weight ----- //
+
+.twb
+  font-weight: bold
+.twn
+  font-weight: normal

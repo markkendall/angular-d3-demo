@@ -1,0 +1,99 @@
+// *************************************
+//
+//   Base
+//   -> Tag-level settings
+//
+// *************************************
+
+html
+  @extend .smooth
+  background: $base3
+  color: $base01
+  font: normal #{map-get($b-fontSize, root)}/#{map-get($b-lineHeight, text)} map-get($b-fontFamily, base)
+  overflow-y: scroll
+
+html,
+body,
+main
+  height: 100%
+
+// -------------------------------------
+//   Block Content
+// -------------------------------------
+
+button
+  border: 0
+  padding: 0
+
+canvas
+  cursor: pointer
+  display: block
+
+hr
+  background: rgba(black, 0.075)
+  border: 0
+  height: 2px
+  margin: map-get($b-space, m) 0
+
+p
+  margin: 0 0 map-get($b-space, m)
+
+svg
+  display: block
+
+// ----- Headings ----- //
+
+h1, .h1
+  display: block
+  font-size: map-get($b-fontSize, xl)
+  font-weight: normal
+  line-height: map-get($b-lineHeight, heading)
+  margin: 0
+
+h2, .h2
+  color: $base00
+  display: block
+  font-size: map-get($b-fontSize, l)
+  font-weight: bold
+  line-height: map-get($b-lineHeight, heading)
+  margin: 0 0 map-get($b-space, m)
+
+h3, .h3
+  display: block
+  font-size: map-get($b-fontSize, m)
+  font-weight: normal
+  margin: 0 0 map-get($b-space, m)
+
+h4, .h4
+  display: block
+  font-weight: normal
+  line-height: map-get($b-lineHeight, heading)
+  margin: 0
+
+// ----- Lists ----- //
+
+ul, ol
+  margin: 0 0 map-get($b-space, m)
+
+// -------------------------------------
+//   Inline Content
+// -------------------------------------
+
+a
+  color: $blue
+  cursor: pointer
+  text-decoration: none
+  &:hover,
+  &:focus
+    text-decoration: underline
+
+.a--invert
+  color: $violet
+
+// -------------------------------------
+//   Animations
+// -------------------------------------
+
+@keyframes in
+  from
+    opacity: 0

@@ -1,0 +1,76 @@
+// *************************************
+//
+//   Helpers
+//   -> Functions, Mixins
+//
+// *************************************
+
+// -------------------------------------
+//   Mixins
+// -------------------------------------
+
+// ----- Responsive ----- //
+
+=respond-to($val, $query: min-width, $media: screen)
+  @media #{$media} and ($query: $val)
+    @content
+
+// -------------------------------------
+//   Extends
+// -------------------------------------
+
+// ----- Animation ----- //
+
+.aniHide
+  opacity: 0
+  visibility: hidden
+
+.aniShow
+  opacity: 1
+  visibility: visible
+
+// ----- Clearfix ----- //
+
+.group::after
+  clear: both
+  content: ''
+  display: table
+
+// ----- Stretch ----- //
+
+.stretch
+  bottom: 0
+  left: 0
+  position: absolute
+  right: 0
+  top: 0
+
+// ----- Text ----- //
+
+.ellipsis
+  display: block
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+
+.ir
+  overflow: hidden
+  &::before
+    display: block
+    content: ''
+    height: 150%
+    width: 0
+
+.smooth
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+
+.srt
+  border: 0
+  clip: rect(0 0 0 0)
+  height: 1px
+  margin: -1px
+  overflow: hidden
+  padding: 0
+  position: absolute
+  width: 1px

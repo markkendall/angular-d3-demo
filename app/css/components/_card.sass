@@ -1,0 +1,19 @@
+// *************************************
+//
+//   Card
+//   -> Generic content container
+//
+// *************************************
+
+.card
+  border: 1px solid rgba($base2, 0.3)
+  display: block
+  padding: map-get($b-space, s) map-get($b-space, m)
+
+a.card
+  &:hover,
+  &:focus
+    background: $base2
+    border-color: transparent
+    color: scale-color($base2, $lightness: 60%)
+    text-decoration: none

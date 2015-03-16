@@ -13,4 +13,4 @@
           ($stateParams, Github) ->
             Github.codeFrequency($stateParams.user, $stateParams.repo)
 
-  $locationProvider.html5Mode(enabled: true, requireBase: false)
+  # $locationProvider.html5Mode(enabled: true, requireBase: false)

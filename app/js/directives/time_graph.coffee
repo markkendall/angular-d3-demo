@@ -26,6 +26,10 @@
     scope.$watch 'start', redraw
     scope.$watch 'end', redraw
 
-    $($window).on 'resize', ->
+    resizeHandler = ->
       redraw()
       scope.$apply()
+
+    $($window).on 'resize', resizeHandler
+    scope.$on '$destroy', ->
+      $($window).off 'resize', resizeHandler

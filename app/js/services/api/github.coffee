@@ -1,12 +1,17 @@
 @app.factory 'Github', ($http) ->
+  baseUrl: 'https://api.github.com'
+  repoUrl: (owner, repo) -> "#{@baseUrl}/repos/#{owner}/#{repo}"
+
   commitActivity: (owner, repo) ->
-    $http.get("https://api.github.com/repos/#{owner}/#{repo}/stats/commit_activity").then(
+    url = "#{@repoUrl(owner, repo)}/stats/commit_activity"
+    $http.get(url).then(
       (response) -> response.data
       (response) -> []
     )
 
   codeFrequency: (owner, repo) ->
-    $http.get("https://api.github.com/repos/#{owner}/#{repo}/stats/code_frequency").then(
+    url = "#{@repoUrl(owner, repo)}/stats/code_frequency"
+    $http.get(url).then(
       (response) -> response.data
       (response) -> []
     )
